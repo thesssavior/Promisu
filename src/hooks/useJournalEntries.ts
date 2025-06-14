@@ -144,7 +144,7 @@ export function useJournalEntries() {
 
   useEffect(() => {
     fetchEntries();
-  }, [user]);
+  }, [user]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return {
     entries,

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Promise, JournalEntry } from "@/types";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { formatDate, isToday, generateId } from "@/lib/utils";
+import { formatDate, isToday } from "@/lib/utils";
 import { CheckCircle2, Circle, MessageSquare, Calendar, Clock, MapPin } from "lucide-react";
 
 interface DailyJournalProps {

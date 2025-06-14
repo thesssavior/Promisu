@@ -1,5 +1,5 @@
 import { type ClassValue, clsx } from "clsx";
-import { Promise, JournalEntry, DailyJournal } from "@/types";
+import { Promise, JournalEntry } from "@/types";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {

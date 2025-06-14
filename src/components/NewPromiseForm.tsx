@@ -50,7 +50,7 @@ export function NewPromiseForm({ onSave, onCancel }: NewPromiseFormProps) {
     onSave(promise);
   };
 
-  const updateFormData = (field: string, value: any) => {
+  const updateFormData = (field: string, value: string | number | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 

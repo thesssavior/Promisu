@@ -133,7 +133,7 @@ export function usePromises() {
 
   useEffect(() => {
     fetchPromises();
-  }, [user]);
+  }, [user]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return {
     promises,

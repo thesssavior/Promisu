@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePromises } from '@/hooks/usePromises';
 import { useJournalEntries } from '@/hooks/useJournalEntries';
+import { Promise as PromiseType } from '@/types';
 import { AuthForm } from '@/components/AuthForm';
 import { DailyJournal } from '@/components/DailyJournal';
 import { NewPromiseForm } from '@/components/NewPromiseForm';
@@ -36,7 +37,7 @@ export default function Home() {
   }
 
   // Handle creating a new promise
-  const handleCreatePromise = async (promise: any) => {
+  const handleCreatePromise = async (promise: Omit<PromiseType, 'id' | 'createdAt' | 'updatedAt'>) => {
     try {
       await createPromise(promise);
       setShowNewPromiseForm(false);

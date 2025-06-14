@@ -1,4 +1,3 @@
-import { createClient } from '@supabase/supabase-js';
 import { createBrowserClient } from '@supabase/ssr';
 
 // These should be set in your .env.local
@@ -101,8 +100,8 @@ export interface Database {
         };
       };
     };
-    Views: {};
-    Functions: {};
-    Enums: {};
+    Views: Record<string, never>;
+    Functions: Record<string, never>;
+    Enums: Record<string, never>;
   };
 } 
